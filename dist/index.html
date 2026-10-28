@@ -67,11 +67,18 @@
     <section id="projects">
       <div class="shell">
         <div class="section-head reveal"><div><div class="kicker">Selected Work</div><h2>代表性项目实践</h2></div><p class="section-intro">以下方向体现了从科研问题、系统架构到测试验证和标准表达的跨环节工作。</p></div>
+        <div class="project-filters" role="group" aria-label="项目分类" hidden>
+          <button type="button" data-filter="all" aria-pressed="true">全部</button>
+          <button type="button" data-filter="agriculture" aria-pressed="false">农机</button>
+          <button type="button" data-filter="drone" aria-pressed="false">无人机</button>
+          <button type="button" data-filter="robot" aria-pressed="false">机器人</button>
+          <button type="button" data-filter="digital-twin" aria-pressed="false">数字孪生</button>
+        </div>
         <div class="projects">
-          <article class="project reveal"><div class="project-num">01</div><h3>无人农机多机协同</h3><div><p>面向农业拖拉机与作业机群的协同控制需求，关注任务协同、终端架构、通信交互及测试验证，并参与相关标准材料编制。</p><div class="project-tags"><span class="tag">协同控制</span><span class="tag">农业装备</span><span class="tag">标准编制</span></div></div></article>
-          <article class="project reveal"><div class="project-num">02</div><h3>无人机集群自组网通信</h3><div><p>围绕复杂环境下的集群通信、网络组织与协同行为，推动通信能力与多智能体任务需求的融合。</p><div class="project-tags"><span class="tag">自组网</span><span class="tag">无人机集群</span><span class="tag">系统协同</span></div></div></article>
-          <article class="project reveal"><div class="project-num">03</div><h3>机器人协作喷涂与折弯</h3><div><p>探索多机器人在工业制造环节中的协同作业、流程衔接与工程部署，服务智能制造场景。</p><div class="project-tags"><span class="tag">工业机器人</span><span class="tag">协作作业</span><span class="tag">智能制造</span></div></div></article>
-          <article class="project reveal"><div class="project-num">04</div><h3>智能配电数字孪生</h3><div><p>构建物理配电系统与数字模型之间的映射和联动，为运行监测、状态分析与策略验证提供数字化环境。</p><div class="project-tags"><span class="tag">数字孪生</span><span class="tag">智能配电</span><span class="tag">数据驱动</span></div></div></article>
+          <article class="project reveal" data-category="agriculture"><div class="project-num">01</div><h3>无人农机多机协同</h3><div><p>面向农业拖拉机与作业机群的协同控制需求，关注任务协同、终端架构、通信交互及测试验证，并参与相关标准材料编制。</p><div class="project-tags"><span class="tag">协同控制</span><span class="tag">农业装备</span><span class="tag">标准编制</span></div></div></article>
+          <article class="project reveal" data-category="drone"><div class="project-num">02</div><h3>无人机集群自组网通信</h3><div><p>围绕复杂环境下的集群通信、网络组织与协同行为，推动通信能力与多智能体任务需求的融合。</p><div class="project-tags"><span class="tag">自组网</span><span class="tag">无人机集群</span><span class="tag">系统协同</span></div></div></article>
+          <article class="project reveal" data-category="robot"><div class="project-num">03</div><h3>机器人协作喷涂与折弯</h3><div><p>探索多机器人在工业制造环节中的协同作业、流程衔接与工程部署，服务智能制造场景。</p><div class="project-tags"><span class="tag">工业机器人</span><span class="tag">协作作业</span><span class="tag">智能制造</span></div></div></article>
+          <article class="project reveal" data-category="digital-twin"><div class="project-num">04</div><h3>智能配电数字孪生</h3><div><p>构建物理配电系统与数字模型之间的映射和联动，为运行监测、状态分析与策略验证提供数字化环境。</p><div class="project-tags"><span class="tag">数字孪生</span><span class="tag">智能配电</span><span class="tag">数据驱动</span></div></div></article>
         </div>
       </div>
     </section>

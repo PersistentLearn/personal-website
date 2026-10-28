@@ -1,4 +1,4 @@
-// 网站交互：手机导航菜单、回到顶部与滚动进入效果。HTML 使用 defer 确保元素就绪。
+// 网站交互：手机导航菜单、项目筛选、回到顶部与滚动进入效果。HTML 使用 defer 确保元素就绪。
 const menu = document.querySelector('.menu');
 const links = document.querySelector('#nav-links');
 menu.addEventListener('click', () => {
@@ -21,6 +21,18 @@ backToTop.addEventListener('click', () => {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   window.scrollTo({ top: 0, behavior: reduceMotion ? 'instant' : 'smooth' });
 });
+
+const projectFilters = document.querySelector('.project-filters');
+const filterButtons = projectFilters.querySelectorAll('button[data-filter]');
+const projects = document.querySelectorAll('#projects .project[data-category]');
+filterButtons.forEach(button => button.addEventListener('click', () => {
+  const category = button.dataset.filter;
+  filterButtons.forEach(filter => filter.setAttribute('aria-pressed', String(filter === button)));
+  projects.forEach(project => {
+    project.hidden = category !== 'all' && project.dataset.category !== category;
+  });
+}));
+projectFilters.hidden = false;
 
 if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const observer = new IntersectionObserver(entries => {

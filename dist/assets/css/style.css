@@ -97,6 +97,12 @@ h2 { font-size: clamp(34px, 5vw, 58px); line-height: 1.13; letter-spacing: -.035
 .focus h3, .project h3 { font-size: 24px; margin: 28px 0 10px; font-weight: 560; }
 .focus-icon { width: 44px; height: 44px; display: grid; place-items: center; color: var(--mint); background: var(--mint-soft); border-radius: 50%; font-family: ui-monospace, monospace; }
 .projects { display: grid; gap: 1px; border-top: 1px solid var(--line); }
+.project-filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
+.project-filters[hidden], .project[hidden] { display: none; }
+.project-filters button { min-height: 44px; max-width: 100%; padding: 8px 18px; border: 1px solid var(--line); border-radius: 999px; background: var(--bg-soft); color: var(--ink); font: inherit; cursor: pointer; }
+.project-filters button:hover { border-color: var(--mint); }
+.project-filters button[aria-pressed="true"] { background: var(--mint); border-color: var(--mint); color: var(--bg); font-weight: 650; }
+.project-filters button:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
 .project { display: grid; grid-template-columns: 110px 1fr 1.1fr; gap: 30px; padding: 34px 0; border-bottom: 1px solid var(--line); align-items: start; }
 .project-num { color: var(--mint); font-family: ui-monospace, monospace; }
 .project h3 { margin: 0; }
